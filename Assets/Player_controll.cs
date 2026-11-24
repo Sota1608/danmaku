@@ -8,7 +8,6 @@ public class Player_controll : MonoBehaviour
     Vector3 halfSize;
     Vector3 bottomLeft;
     Vector3 topRight;
-    bool MouseMode = true;
     float moveX;
     float moveY;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +26,7 @@ public class Player_controll : MonoBehaviour
         bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 10));
         topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 10));　
         
-        //ボタンモード処理
+        //キー処理
         if(Keyboard.current.wKey.isPressed||Keyboard.current.upArrowKey.isPressed)
         {
             moveY = 1.0f;
